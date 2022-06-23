@@ -11,13 +11,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jordanjwatkins/piskel-cli.git"
+    "url": "https://github.com/jordanjwatkins/piskel-cli.git"
   },
   "author": "Jordan J Watkins",
   "license": "Apache-2.0",
   "dependencies": {
     "jszip": "^3.10.0",
-    "minimist": "^1.2.6",
+    "minimist": "^1.2.0",
     "phantomjs": "^2.1.7"
   },
   "devDependencies": {
@@ -26,12 +26,5 @@
     "jest": "^24.9.0",
     "jest-cli": "^24.9.0",
     "pixelmatch": "^5.1.0"
-  },
-  "bugs": {
-    "url": "https://github.com/jordanjwatkins/piskel-cli/issues"
-  },
-  "homepage": "https://github.com/jordanjwatkins/piskel-cli#readme",
-  "directories": {
-    "test": "test"
   }
 }
