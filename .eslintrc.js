@@ -13,7 +13,6 @@ module.exports = {
         phantom: true
     },
 
-    plugins: ["jest"],
 
     rules: {
         "no-console": "off",
