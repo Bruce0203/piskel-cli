@@ -119,8 +119,8 @@ if (args.pixiMovie) {
             zip.file(path.basename(filename), fs.readFileSync(options.output + '.png'), { binary: true });
         } else {
             zip.file(path.basename(filename), fs.readFileSync(filename));
+            fs.writeFileSync(options.output + ".json", fs.readFileSync(filename), 'utf-8');
             fs.unlinkSync(filename);
-            fs.writeFileSync(options.output + path.basename(filename), fs.readFileSync(filename), 'utf-8');
         }
     });
 
