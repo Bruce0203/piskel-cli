@@ -119,15 +119,9 @@ if (args.pixiMovie) {
             zip.file(path.basename(filename), fs.readFileSync(options.output + '.png'), { binary: true });
         } else {
             zip.file(path.basename(filename), fs.readFileSync(filename));
-
-            fs.unlinkSync(filename);
+            // fs.unlinkSync(filename);
+            fs.writeFileSync(path.basename(filename), fs.readFileSync(filename), 'utf-8');
         }
-    });
-
-    zip.generateAsync({
-        type : 'nodebuffer'
-    }).then(function (zipped) {
-        fs.writeFileSync(options.output.replace('.png', '') + '.zip', zipped, 'utf-8');
     });
 
     fs.unlinkSync('zip-manifest.json');
